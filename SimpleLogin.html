@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Title of the page displayed on the browser tab -->
+    <title>The Movie Professor</title>
+
+    <!-- Title on the actual Splash page of the website in bold -->
+    <h1><b>The Movie Professor</b></h1>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:topright">Login</button>
+    <hr></hr>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- External Style Sheet for the Login Button -->
+    <link rel="stylesheet" href="buttonStyle.css">
+</head>
+<body>
+    <!-- Summary of what the website will do -->
+    <p>Welcome to <b>The Movie Professor</b>, where I am your onestop shop
+    to all thing Movies and TV shows. I will give you recommendations on what you should
+    watch, as well as allowing you to create and account and record what you have already
+    seen. This also helps me to give you recommendations. I hope you enjoy your searching
+    and watching of both new and old Movies/TV shows!</p>
+
+    <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+            
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+    </div>
+
+    <!-- JavaScript script for the button action and closing of the button-->
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
+</body>
+</html>
