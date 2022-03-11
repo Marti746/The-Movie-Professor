@@ -1,0 +1,2 @@
+Title   Genre   Synopsis    StarActors  Rating
+"Parasite (2019)"   "Star Actors: Song Kang-ho, Lee Sun-kyun" "Synopsis: Desperate to improve their financial situation, members of the Kim family pose as tutors, teachers, maids, and chauffeurs to obtain employment from the prosperous and naive Park family. As the Kim family gets a taste of what life is like for the extravagantly rich, their resentment builds." "Drama" "R" 
