@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +16,7 @@
     <!-- External Style Sheet for the Login Button -->
     <link rel="stylesheet" href="buttonStyle.css">
 </head>
-<body>
+<body style="background-color:lightblue;"">
     <!-- Summary of what the website will do -->
     <p>Welcome to <b>The Movie Professor</b>, where I am your onestop shop
     to all thing Movies and TV shows. I will give you recommendations on what you should
@@ -40,7 +38,8 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <button type="submit">Login<a href="Updated.html"></button>
+        <button type="submit" onclick="check(this.form)" value="Login"/>Login</button>
+
         <button type="submit">Sign Up</button>
         <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -53,7 +52,26 @@
         </div>
     </form>
     </div>
+    <div>
+            <!-- Search Bar will go here -->
+        <form role="search" id="form">
+        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+        <button type="buttonSearch"> GO </button>
+      </form>
+    </div>
 
+    <!-- Javascript for Login Button that is hard coded for the Admin Account right now-->
+    <script language="javascript">
+        function check(form) { /*function to check userid & password*/
+            /*the following code checkes whether the entered userid and password are matching*/
+            if(form.uname.value == "admin01" && form.psw.value == "Adm1n-") {
+                window.open('admin.html')/*opens the target page while Id & password matches*/
+            }
+            else {
+                alert("Error Password or Username")/*displays error message*/
+            }
+        }
+    </script>
     <!-- JavaScript script for the button action and closing of the button-->
     <script>
     // Get the modal
@@ -66,9 +84,26 @@
         }
     }
     </script>
+    <!-- Script for the Search Button -->
+    <script>
+        const f = document.getElementById('form');
+        const q = document.getElementById('query');
+        const google = 'https://www.google.com/search?q=site%3A+';
+
+        function submitted(event) {
+        event.preventDefault();
+        const url = google +  '+' + q.value;
+        const win = window.open(url, '_blank');
+        win.focus();
+        }
+
+        f.addEventListener('submit', submitted);
+    </script>
 
 </body>
+
 <footer>
     © 2022 Full Sentence
 </footer>
+
 </html>

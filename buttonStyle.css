@@ -2,6 +2,7 @@
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
+    margin: 100px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -14,9 +15,25 @@ input[type=text], input[type=password] {
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
+    margin-right: 10px;
     border: none;
     cursor: pointer;
     width: 100%;
+    /*position:absolute;
+    top:0;
+    right:0;
+    padding-right: 0px 0px 50px;*/
+    }
+
+    buttonSearch {
+      background-color: #04AA6D;
+      color: white;
+      padding: 5px 5px;
+      margin: 8px 0;
+      margin-right: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
     }
 
     button:hover {
@@ -46,7 +63,7 @@ input[type=text], input[type=password] {
     padding-top: 16px;
     }
 
-    /* The Modal (background) */
+    /*Modal (background)*/
     .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -61,7 +78,7 @@ input[type=text], input[type=password] {
     padding-top: 60px;
     }
 
-    /* Modal Content/Box */
+    /*Modal Content/Box*/
     .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
@@ -69,7 +86,7 @@ input[type=text], input[type=password] {
     width: 80%; /* Could be more or less, depending on screen size */
     }
 
-    /* The Close Button (x) */
+    /*Close Button (x) */
     .close {
     position: absolute;
     right: 25px;
@@ -85,7 +102,7 @@ input[type=text], input[type=password] {
     cursor: pointer;
     }
 
-    /* Add Zoom Animation */
+    /*Zoom Animation */
     .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -111,3 +128,25 @@ input[type=text], input[type=password] {
         width: 100%;
     }
     }
+
+    ::placeholder {
+        color: #fff;
+        opacity: 0.7; 
+      }
+  
+      svg {
+        color: #fff;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+
+      form {
+        width: 300px;
+        height: 44px;
+        border-radius: 5px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }
