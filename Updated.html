@@ -6,6 +6,12 @@
 
     <!-- Title on the actual Splash page of the website in bold -->
     <h1><b>The Movie Professor</b></h1>
+    <div class="topnav">
+        <a class="active" href="Updated.html">Home</a>
+        <a href="https://beccafriedman.net/MovieDatabaseConnection3.php">Movies</a>
+        <a href="About.html">About</a>
+        <!-- <a href="login"> Login Or Sign Up</a> -->
+    </div>
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:topright">Login or Sign Up</button>
 
     <hr></hr>
@@ -59,6 +65,40 @@
         <button type="buttonSearch"> GO </button>
       </form>
     </div>
+    
+    <?php
+        include("MovieDatabaseConnection3.php");
+    ?>
+
+    <!-- CSS for TopNav bar -->
+    <style>
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        /* Style the links inside the nav bar */
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color when hovering over the button */
+        .topnav a:hover {
+            background-color: burlywood;
+            color: black;
+        }
+
+        /* Add color to current link */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
 
     <!-- Javascript for Login Button that is hard coded for the Admin Account right now-->
     <script language="javascript">
