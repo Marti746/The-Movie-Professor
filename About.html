@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h1>ABOUT THE MOVIE PROFESSOR</h1>
+    <!-- Imported statements as well as Stylesheets-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-        <div class="topnav">
-            <a href="Updated.html">Home</a>
-            <a href="https://beccafriedman.net/MovieDatabaseConnection3.php">Movies</a>
-            <a class="active" href="About.html">About</a>
-        </div>
+    <!-- Movie Professor Logo -->
+    <img src="movieProf.png" height="120" alt="Movie prof logo">
+
+    <!-- Nav bar on the top with each section labeled -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Buttons are ajax nav bar to link to each seperate page-->
+    <div id="navb" class="navbar-collapse collapse hide">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Updated.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="MovieList.php">Movies</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="About.html">About</a>
+        </li>
+        </ul>
+    </div>
+    </nav>
     </head>
 
+    <!-- Text to tell the user what the website is all about -->
     <body style="background-color:lightblue;"">
-        <p>The Movie Professor has been brought to life by Full Sentence is a movie database. While similar to IMBd, we make ourselves
-            different by aiming toward a more family friendly and manageable website. Making movie viewing and 
-            movie nights fun again is our primary goal. We aim to give parents the ability to regulate what movies appear 
-            for their child.
+        <p class="text">The Movie Professor brought to life by Full Sentence is a movie database. Similar to 
+            IMDb, however we are different!
+            Here at the movie professor we aim ourselves to families. Making movie viewing and 
+            movie nights fun again. We want to bring families together to be able to view movies
+            depending on what the parent selects for the child.
         </p>
-        <p>
+        <p class="text">
             Making the Movie Professor into a family friendly place was a very simple choice. 
             We wanted to allow a user to be able to create a parent account that could than control
             children accounts. Allowing the parent account to select movie rating they want their child
@@ -26,7 +51,7 @@
             the child account won't be able to see anymore Rated R movies. This allows the Parent to be at 
             ease while their child searches for a movie on our site.
         </p>
-        <p>
+        <p class="text">
             Bringing family friendly content is what we hold in the highest regard her at Full Sentence.
             Allowing users to track their watched movie, select ratings they want to see, or by audience 
             ratings. And finally allowing Parents to have children accounts that can be monitored by their
@@ -34,32 +59,11 @@
         </p>
     </body>
 
+    <!-- Style for the text -->
     <style>
-        .topnav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        
-        /* Style the links inside the nav bar */
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        /* Change the color when hovering over the button */
-        .topnav a:hover {
-            background-color: burlywood;
-            color: black;
-        }
-
-        /* Add color to current link */
-        .topnav a.active {
-            background-color: #04AA6D;
-            color: white;
+        .text{
+            padding: 15px;
+            margin-left: 2px;
         }
     </style>
 </html>

@@ -4,73 +4,76 @@
     <!-- Title of the page displayed on the browser tab -->
     <title>The Movie Professor</title>
 
-    <!-- Title on the actual Splash page of the website in bold -->
-    <h1><b>The Movie Professor</b></h1>
-    <div class="topnav">
-        <a class="active" href="Updated.html">Home</a>
-        <a href="https://beccafriedman.net/MovieDatabaseConnection3.php">Movies</a>
-        <a href="About.html">About</a>
-        <!-- <a href="login"> Login Or Sign Up</a> -->
+    <!-- Title on the actual Splash page of the website in bold
+    <h1><b>The Movie Professor</b></h1> -->
+
+    <!-- Imported statements as well as Stylesheets-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- External Style Sheet -->
+    <link rel="stylesheet" href="buttonStyle.css">
+    <!-- Imports of the ajax library used to for the nav bar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Import of bootstrap tp help position the nav bar and items -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Movie Professor Logo -->
+    <img src="movieProf.png" height="120" alt="Movie prof logo">
+
+    <!-- Nav bar on the top with each section labeled -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Buttons are ajax nav bar to link to each seperate page-->
+    <div id="navb" class="navbar-collapse collapse hide">
+        <ul class="navbar-nav">
+        <!-- Takes the user to the home page and is set as active -->
+        <li class="nav-item active">
+            <a class="nav-link" href="Updated.html">Home</a>
+        </li>
+        <!-- MovieList button to display the movies on the webpage -->
+        <li class="nav-item">
+            <a class="nav-link" href="MovieList.php">Movies</a>
+        </li>
+        <!-- About button linking to About html-->
+        <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+        </li>
+        </ul>
+
+        <!-- Nav bar log in and sign up sections-->
+        <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="LogIn.php"><span class="fas fa-user"></span> Sign Up</a>
+        </li>
+        <!-- List item for the login button that links to the same page -->
+        <li class="nav-item">
+            <a class="nav-link" href="LogIn.php"><span class="fas fa-sign-in-alt"></span> Login</a>
+        </li>
+        </ul>
     </div>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:topright">Login or Sign Up</button>
+    </nav>
 
     <hr></hr>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- External Style Sheet for the Login Button -->
-    <link rel="stylesheet" href="buttonStyle.css">
 </head>
+
+<!-- Body of the page -->
 <body style="background-color:lightblue;"">
-    <!-- Summary of what the website will do -->
-    <p>Welcome to <b>The Movie Professor</b>, where I am your onestop shop
-    to all thing Movies and TV shows. I will give you recommendations on what you should
-    watch, as well as allowing you to create and account and record what you have already
-    seen. This also helps me to give you recommendations. I hope you enjoy your searching
-    and watching of both new and old Movies/TV shows!</p>
-
-    <div id="id01" class="modal">
-
-    <form class="modal-content animate" action="Updated.html" method="post">
-        <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-
-        <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit" onclick="check(this.form)" value="Login"/>Login</button>
-
-        <button type="submit">Sign Up</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-    </form>
+    <div class="body-text">
+        <!-- Summary of what the website will do -->
+        <p>Welcome to <b>The Movie Professor</b>, where I am your onestop shop
+        to all thing Movies and TV shows. I will give you recommendations on what you should
+        watch, as well as allowing you to create and account and record what you have already
+        seen. This also helps me to give you recommendations. I hope you enjoy your searching
+        and watching of both new and old Movies/TV shows!</p>
     </div>
-    <div>
-            <!-- Search Bar will go here -->
-        <form role="search" id="form">
-        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
-        <button type="buttonSearch"> GO </button>
-      </form>
-    </div>
-    
-    <?php
-        include("MovieDatabaseConnection3.php");
-    ?>
 
-    <!-- CSS for TopNav bar -->
+    <!-- Nav bar css for old nav bar -->
     <style>
         .topnav {
             background-color: #333;
@@ -112,20 +115,9 @@
             }
         }
     </script>
-    <!-- JavaScript script for the button action and closing of the button-->
-    <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
     <!-- Script for the Search Button -->
-    <script>
+    <!-- <script>
         const f = document.getElementById('form');
         const q = document.getElementById('query');
         const google = 'https://www.google.com/search?q=site%3A+';
@@ -138,12 +130,12 @@
         }
 
         f.addEventListener('submit', submitted);
-    </script>
+    </script> -->
 
 </body>
 
-<footer>
+<!-- Footer for the company -->
+<footer class="footer-text">
     © 2022 Full Sentence
 </footer>
-
 </html>
